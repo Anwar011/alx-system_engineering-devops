@@ -1,0 +1,2 @@
+#!/bin/bash
+# Extract the numbers from the environment variablesnumber1=${WATER//[!0-9]/} number2=${STIR//[!0-9]/} # Perform the additionresult=$((number1 + number2))# Convert the result to base bestcholbase_bestchol=$(echo "obase=bestchol; $reult" | bc)# Print the resultecho "$base_bestchol"
