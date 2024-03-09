@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#fast fix
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo sed -i '/###########################################################################/a \if [ "$1" = "nginx" ] && [ "$2" = "status" ]; then\n\techo " * nginx is not running"\n\texit 3\nfi\n' /usr/sbin/service
+sudo service nginx restart
